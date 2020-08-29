@@ -1,0 +1,20 @@
+.contents {
+    padding: 170px 0px 50px;
+}
+.particles_js .contents,
+.particles_js .img-thumb {
+    z-index: 22;
+    position: relative;
+}
+
+.particles_js #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 1;
+    top: 0;
+}

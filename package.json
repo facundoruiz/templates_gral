@@ -1,0 +1,26 @@
+{
+  "name": "templates_gral",
+  "version": "1.0.0",
+  "description": "Templates de uso gral",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facundoruiz/templates_gral.git"
+  },
+  "keywords": [
+    "templates",
+    "bootstrap",
+    "css",
+    "hmtl"
+  ],
+  "author": "Facundo Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/facundoruiz/templates_gral/issues"
+  },
+  "homepage": "https://github.com/facundoruiz/templates_gral#readme",
+  "dependencies": {}
+}
