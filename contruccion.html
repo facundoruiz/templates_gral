@@ -24,10 +24,11 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <i class="fas fa-tools fa-7x"></i>
-        <h1 class="bd-title" id="content">Estamos en Mantenimiento</h1>
-        <p class="bd-lead">Disculpe las molestias, volveremos pronto!</p>
-        
+
+        <h1 class="bd-title" id="content">Sitio en Contrucción</h1>
+        <i class="fas fa-cogs fa-7x" ></i>
+        <p class="bd-lead">Muy Pronto! un nuevo lugar de encuentro</p>
+        <a class="btn btn-primary " href="#" onclick="javascript:share()">Avisa a los demás <i class="fa fa-share-alt" aria-hidden="true"></i></a>
       </div>
     </section>
      </main>
@@ -44,6 +45,21 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script></body>
 <script>
     
+
+//---- otras
+function share() {
+  var text = 'Muy Pronto! un nuevo lugar de encuentro';
+  if ('share' in navigator) {
+    navigator.share({
+      title: document.title,
+      text: text,
+      url: location.href,
+    })
+  } else {
+    // Here we use the WhatsApp API as fallback; remember to encode your text for URI
+    location.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text + ' - ') + location.href
+  }
+}
 
 </script>
     </body>
