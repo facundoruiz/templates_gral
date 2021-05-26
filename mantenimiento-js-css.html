@@ -32,7 +32,7 @@
             <div class="text-center">
             <h1 class="bd-title" id="content">Estamos en Mantenimiento</h1>
             <p class="bd-lead">Disculpe las molestias, volveremos pronto!</p>
-            <a class="btn btn-primary " href="#" onclick="javascript:share()">Puede contactarnos!</a>
+            <a class="btn btn-primary " href="#" onclick="javascript:send('nrodetelefono')"><i class="fab fa-whatsapp"></i> Puede contactarnos!</a>
             </div>
           </div>
         </div>
@@ -64,18 +64,12 @@
     
 
 //---- otras
-function share() {
+function send(telefono) {
   var text = 'Agregar Texto personalizado';
-  if ('share' in navigator) {
-    navigator.share({
-      title: document.title,
-      text: text,
-      url: location.href,
-    })
-  } else {
-    // Here we use the WhatsApp API as fallback; remember to encode your text for URI
-    location.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text + ' - ') + location.href
-  }
+  
+    // Here we use the WhatsApp API; 
+    location.href = 'https://api.whatsapp.com/send?phone='+ telefono +'&text='+ encodeURIComponent(text) 
+
 }
 
 </script>
